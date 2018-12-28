@@ -1,7 +1,13 @@
 #!/usr/bin/env python3
+<<<<<<< HEAD
 #p3_181125_2224.py
 # Tkinter. Lesson 14.
 # Widget Menu
+=======
+#p3_181121_2116.py
+# Tkinter. Lesson 13.
+# Filedialogs
+>>>>>>> origin/master
 
 import tkinter as tk
 from tkinter import filedialog as fd
