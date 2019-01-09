@@ -8,71 +8,75 @@ from tkinter import messagebox as mb
 
 BTN_HEIGHT = 1
 BTN_WIDTH = 7
-ENTRY_TEXT = "The result"
+ENTRY_TEXT = "Press buttons to get an expression"
 
 class Calculator:
     def __init__(self, master):
         self.master = master
-        self.entry_var = tk.StringVar()
+        self.entry_data = tk.StringVar()
         self.create_interface()
         self.grid_interface()
+        # Variables assignment
         self.master.title("Simple Calculator")
-        self.entry_var.set(ENTRY_TEXT)
-        self.num = []
+        self.entry_data.set(ENTRY_TEXT)
+        self.expression = ''
+        self.is_result = False
     def create_interface(self):
         self.button1 = tk.Button(self.master, text=' 1 ',
                                 height=BTN_HEIGHT, width=BTN_WIDTH,
-                                 command=lambda: self.add_number(1))
+                                 command=lambda: self.press(1))
         self.button2 = tk.Button(self.master, text=' 2 ',
                                 height=BTN_HEIGHT, width=BTN_WIDTH,
-                                  command=lambda: self.add_number(2))
+                                  command=lambda: self.press(2))
         self.button3 = tk.Button(self.master, text=' 3 ',
                                 height=BTN_HEIGHT, width=BTN_WIDTH,
-                                 command=lambda: self.add_number(3))
+                                 command=lambda: self.press(3))
         self.button4 = tk.Button(self.master, text=' 4 ',
                                 height=BTN_HEIGHT, width=BTN_WIDTH,
-                                 command=lambda: self.add_number(4))
+                                 command=lambda: self.press(4))
         self.button5 = tk.Button(self.master, text=' 5 ',
                                 height=BTN_HEIGHT, width=BTN_WIDTH,
-                                 command=lambda: self.add_number(5))
+                                 command=lambda: self.press(5))
         self.button6 = tk.Button(self.master, text=' 6 ',
                                 height=BTN_HEIGHT, width=BTN_WIDTH,
-                                 command=lambda: self.add_number(6))
+                                 command=lambda: self.press(6))
         self.button7 = tk.Button(self.master, text=' 7 ',
                                 height=BTN_HEIGHT, width=BTN_WIDTH,
-                                 command=lambda: self.add_number(7))
+                                 command=lambda: self.press(7))
         self.button8 = tk.Button(self.master, text=' 8 ',
                                 height=BTN_HEIGHT, width=BTN_WIDTH,
-                                 command=lambda: self.add_number(8))
+                                 command=lambda: self.press(8))
         self.button9 = tk.Button(self.master, text=' 9 ',
                                 height=BTN_HEIGHT, width=BTN_WIDTH,
-                                 command=lambda: self.add_number(9))
+                                 command=lambda: self.press(9))
         self.button0 = tk.Button(self.master, text=' 0 ',
                                 height=BTN_HEIGHT, width=BTN_WIDTH,
-                                 command=lambda: self.add_number(0))
+                                 command=lambda: self.press(0))
         self.button_divide = tk.Button(self.master, text=' / ',
                                       height=BTN_HEIGHT, width=BTN_WIDTH,
-                                       lambda: set_action('/'))
+                                       command=lambda: self.press('/'))
         self.button_multiply = tk.Button(self.master, text=' x ',
                                         height=BTN_HEIGHT, width=BTN_WIDTH,
-                                         lambda: set_action('*'))
+                                         command=lambda: self.press('*'))
         self.button_minus = tk.Button(self.master, text=' - ',
                                      height=BTN_HEIGHT, width=BTN_WIDTH,
-                                      lambda: set_action('-'))
+                                      command=lambda: self.press('-'))
         self.button_plus = tk.Button(self.master, text=' + ',
                                     height=BTN_HEIGHT, width=BTN_WIDTH,
-                                     lambda: set_action('+'))
+                                     command=lambda: self.press('+'))
         self.button_point = tk.Button(self.master, text=' . ',
-                                     height=BTN_HEIGHT, width=BTN_WIDTH)
+                                     height=BTN_HEIGHT, width=BTN_WIDTH,
+                                      command=lambda: self.press('.'))
         self.button_clear = tk.Button(self.master, text='cls',
-                                     height=BTN_HEIGHT, width=BTN_WIDTH)
+                                     height=BTN_HEIGHT, width=BTN_WIDTH,
+                                      command=self.do_clear)
         self.button_result = tk.Button(self.master, text='Enter',
                                        height=BTN_HEIGHT, width=BTN_WIDTH*5,
-                                       command = self.show_result)
-        self.entry_expression = tk.Entry(self.master, textvariable=self.entry_var,
+                                       command=self.calculate_result)
+        self.entry_field = tk.Entry(self.master, textvariable=self.entry_data,
                                          state='readonly', width=BTN_WIDTH*5)
     def grid_interface(self):
-        self.entry_expression.grid(row=0, column=0, columnspan=4)
+        self.entry_field.grid(row=0, column=0, columnspan=4)
         self.button7.grid(row=1, column=0)
         self.button8.grid(row=1, column=1)
         self.button9.grid(row=1, column=2)
@@ -90,23 +94,27 @@ class Calculator:
         self.button_clear.grid(row=4, column=2)
         self.button_plus.grid(row=4, column=3)
         self.button_result.grid(row=5, column=0, columnspan=4)
-    def add_number(self, num):
-        self.num.append(num)
-    def show_result(self):
-        self.number2 = self.num
-        result_text = ' = ' + self.calculate()
-        self.entry_expression.insert(tk.END, result_text)
-        #mb.showinfo(None, self.num)
-    def set_action(self, action):
-        self.number1 = self.num
-        self.num = ''
-        self.set_entry(action)
-    def set_entry(self, symbol):
-        if self.entry_expression == ENTRY_TEXT:
-            self.entry_expression.delete(0, tk.END)
-        self.entry_expression.insert(tk.END, symbol)
-    def calculate(self):
-        pass
+    def press(self, num):
+        if self.verify_not_operand(num) and self.is_result:
+            self.expression = ''
+        self.expression = self.expression + str(num)
+        self.entry_data.set(self.expression)
+        self.is_result = False
+    def calculate_result(self):
+        try:
+            self.expression = str(eval(self.entry_data.get()))
+            self.entry_data.set(self.expression)
+            self.is_result = True
+        except Exception as error_type:
+            print('Error info:', error_type)
+            self.entry_data.set('Error occured')
+            self.expression = ''
+    def do_clear(self):
+        self.expression = self.entry_data.get()[:-1]
+        self.entry_data.set(self.expression)
+    def verify_not_operand(self, operand):
+        if not operand in ('+', '-', '*', '/'): return True
+        else: return False
 
 def main():
     root = tk.Tk()
