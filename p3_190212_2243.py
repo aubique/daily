@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 #p3_190212_2243.py
-# Telegram bot calculator #1
+# Telegram bot calculator
+# Bot model without webhooks
 
 import requests
 import re
