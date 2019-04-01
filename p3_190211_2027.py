@@ -43,7 +43,7 @@ def send_message(room_id, message_text='Loading...'):
     if 200 != check_code.status_code:
         print(check_code)
 
-def decode_to_json(data=get_updates(), filename='files/p3json_190211_2027.json'):
+def decode_to_json(data=get_updates(), filename='files/p3_190211_2027.json'):
     with open(filename, 'w') as f:
         json.dump(data, f, indent=2, ensure_ascii=False)
 
