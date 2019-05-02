@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 #p3_190427_2103.py
 # Parsing Avito. Part 2
-# Exploiting Selenium-webdriver as alternative of PhantomJS
+# Recognize the phones numbers from the images parsed on Avito
+# Use of Selenium-webdriver as alternative to PhantomJS
 
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
@@ -11,7 +12,6 @@ from PIL.PngImagePlugin import PngImageFile
 from pytesseract import image_to_string
 from base64 import decodebytes
 
-URL1 = 'https://www.avito.ru/rossiya/telefony?p=1&q=htc'
 URL = 'https://www.avito.ru/kaluga/telefony/prodam_htc10_m10h_gray_1105880585'
 BCLASS = 'button item-phone-button js-item-phone-button button-origin button-origin-blue button-origin_full-width button-origin_large-extra item-phone-button_hide-phone item-phone-button_card js-item-phone-button_card'
 ICLASS = 'item-phone-big-number js-item-phone-big-number'
