@@ -1,7 +1,16 @@
+# Ignore certian source-files
+p3_190511_2124.py
+p3_190522_2352.py
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
+
+# Databases
+*.db
+*.mysql
+*_msg.json
 
 # C extensions
 *.so
