@@ -1,9 +1,10 @@
-# Ignore certian source-files
-p3_190511_2124.py
-p3_190522_2352.py
-files/p3_190531_2024.db
+# Exclude some source-files
+p3x*.py
+#files/p3_190531_2024.db
 
 # Do not include output files
+*.json
+*.db
 *.csv
 
 # Byte-compiled / optimized / DLL files
