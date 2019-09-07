@@ -1,6 +1,6 @@
 # Exclude some source-files
-p3x*.py
-#files/p3_190531_2024.db
+p3_*_x.*
+*gist/
 
 # Do not include output files
 *.json
@@ -97,6 +97,7 @@ celerybeat-schedule
 .env
 
 # virtualenv
+virtualenv/
 .venv
 venv/
 ENV/

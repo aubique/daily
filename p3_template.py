@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-#p3_template.py
-# Description
+# p3_template.py
+# Your description here
 
 def main():
     pass
