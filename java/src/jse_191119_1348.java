@@ -6,11 +6,12 @@ import java.util.Scanner;
 import java.util.TreeMap;
 
 public class jse_191119_1348 {
+// java4python - Chapter 4: Java Data Types
 
     public static void main(String[] args) {
 //        showRemainder();
 //        useList("tmp/test.dat");
-        useDictionary("tmp/alice30.txt");
+//        useDictionary("tmp/alice30.txt");
     }
 
     private static void showRemainder() {
