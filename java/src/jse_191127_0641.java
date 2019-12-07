@@ -10,7 +10,7 @@ import java.util.regex.Pattern;
  * Switch causes are implemented with the Command Design Pattern.
  * Based on the previous task - jse_191126_2031
  */
-public class jse_191127_0309 {
+public class jse_191127_0641 {
     private static final String EXAMPLE = "5+ 12=";
 
     public static void main(String[] args) {
