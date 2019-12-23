@@ -1,6 +1,7 @@
 # IntelliJ Idea user config
 */.idea/workspace.xml
 */.idea/tasks.xml
+*/.idea/dataSources*
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
