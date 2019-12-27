@@ -32,7 +32,7 @@ public class jse_191206_1258 {
 
     /**
      * Abbreviate a Two Word Name
-     * https://www.codewars.com/kata/abbreviate-a-two-word-name/train/java
+     * https://www.codewars.com/kata/abbreviate-a-two-word-name/java
      */
     public static String abbrevName(String name) {
         StringBuilder newName = new StringBuilder();
