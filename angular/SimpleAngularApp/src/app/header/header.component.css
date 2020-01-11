@@ -1,0 +1,14 @@
+.header {
+  background: #ccc;
+  height: 30px;
+}
+.link {
+  float: left;
+  padding: 5px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+a {
+  cursor: pointer;
+  color: #0000ff;
+}

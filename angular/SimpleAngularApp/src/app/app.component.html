@@ -1,0 +1,8 @@
+<app-header #headerComponent></app-header>
+
+<app-page1 *ngIf="headerComponent.pageRequested === 1"></app-page1>
+<app-page2 *ngIf="headerComponent.pageRequested === 2"></app-page2>
+<app-page3 *ngIf="headerComponent.pageRequested === 3"></app-page3>
+
+<app-footer #footer [lastAccessed]="startTime"></app-footer>
+<button (click)="updateLastAccessed()">Update last accessed</button>
