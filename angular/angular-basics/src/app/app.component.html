@@ -1,0 +1,17 @@
+<h1>Hello world</h1>
+
+<button (click)="onClick()">Click me!</button>
+
+<input
+  type="text"
+  (keyup.enter)="onInput($event)"
+  (blur)="onBlur(myInput.value)"
+  #myInput
+>
+<p><strong>{{inputValue}}</strong></p>
+
+<hr>
+<app-post></app-post>
+
+<hr>
+<app-post4></app-post4>
