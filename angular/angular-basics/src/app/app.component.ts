@@ -7,20 +7,5 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
 
-  title = 'Dynamic title';
-  inputValue = '';
-
-  constructor() {
-  }
-
-  onInput(event: KeyboardEvent) {
-    this.inputValue = (event.target as HTMLInputElement).value;
-  }
-
-  onClick() {
-  }
-
-  onBlur(str: string) {
-    this.inputValue = str;
-  }
+  backgroundToggle = false;
 }

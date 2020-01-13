@@ -1,17 +1,22 @@
-<h1>Hello world</h1>
+<h1>Hello Angular World!</h1>
 
-<button (click)="onClick()">Click me!</button>
+<button (click)="backgroundToggle=!backgroundToggle">Toggle</button>
 
-<input
-  type="text"
-  (keyup.enter)="onInput($event)"
-  (blur)="onBlur(myInput.value)"
-  #myInput
->
-<p><strong>{{inputValue}}</strong></p>
+<!--<div [ngStyle]="{-->
+<!--  width: '200px',-->
+<!--  height: '200px',-->
+<!--  borderRadius: '5px',-->
+<!--  border: '1px solid #ccc',-->
+<!--  background: backgroundToggle ? 'red' : 'blue'-->
+<!--}">-->
+<!--</div>-->
 
-<hr>
-<app-post></app-post>
+<p [ngClass]="{
+  red: !backgroundToggle,
+  blue: backgroundToggle
+}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, illum?</p>
 
-<hr>
-<app-post4></app-post4>
+<p
+  [class.blue]="!backgroundToggle"
+  [class.red]="backgroundToggle"
+>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, ex.</p>
