@@ -1,22 +1,5 @@
 <h1>Hello Angular World!</h1>
 
-<button (click)="backgroundToggle=!backgroundToggle">Toggle</button>
-
-<!--<div [ngStyle]="{-->
-<!--  width: '200px',-->
-<!--  height: '200px',-->
-<!--  borderRadius: '5px',-->
-<!--  border: '1px solid #ccc',-->
-<!--  background: backgroundToggle ? 'red' : 'blue'-->
-<!--}">-->
-<!--</div>-->
-
-<p [ngClass]="{
-  red: !backgroundToggle,
-  blue: backgroundToggle
-}">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, illum?</p>
-
-<p
-  [class.blue]="!backgroundToggle"
-  [class.red]="backgroundToggle"
->Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, ex.</p>
+<p>
+  {{ now | date:'medium' | uppercase }}
+</p>
