@@ -1,0 +1,25 @@
+<div class="container">
+  <h1>Angular Components</h1>
+
+  <h2>Subheader</h2>
+
+  <app-post-form
+    (onAdd)="updatePosts($event)"
+  ></app-post-form>
+
+  <hr/>
+
+  <app-post
+    (onRemove)="removePost($event)"
+    *ngFor="let p of posts"
+    [post]="p"
+  >
+    <div #info>
+      <small *ngIf="p.text.length > 10; else short">Long post</small>
+      <ng-template #short>
+        <small>Small post</small>
+      </ng-template>
+    </div>
+  </app-post>
+
+</div>
