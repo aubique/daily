@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ng-components/ng-components.iml" filepath="$PROJECT_DIR$/ng-components/ng-components.iml" />
       <module fileurl="file://$PROJECT_DIR$/ng-directives/ng-directives.iml" filepath="$PROJECT_DIR$/ng-directives/ng-directives.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ng-pipes/ng-pipes.iml" filepath="$PROJECT_DIR$/ng-pipes/ng-pipes.iml" />
     </modules>
   </component>
 </project>
