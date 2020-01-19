@@ -3,16 +3,12 @@ import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {FormsModule} from "@angular/forms";
-import {StyleDirective} from "./directives/style.directive";
-import { IfnotDirective } from './directives/ifnot.directive';
-import { ExMarksPipe } from './pipes/ex-marks.pipe';
+import {CounterComponent} from './counter/counter.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    StyleDirective,
-    IfnotDirective,
-    ExMarksPipe
+    CounterComponent,
   ],
   imports: [
     BrowserModule,
