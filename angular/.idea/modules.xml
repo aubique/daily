@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ng-components/ng-components.iml" filepath="$PROJECT_DIR$/ng-components/ng-components.iml" />
       <module fileurl="file://$PROJECT_DIR$/ng-directives/ng-directives.iml" filepath="$PROJECT_DIR$/ng-directives/ng-directives.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ng-forms/ng-forms.iml" filepath="$PROJECT_DIR$/ng-forms/ng-forms.iml" />
       <module fileurl="file://$PROJECT_DIR$/ng-pipes/ng-pipes.iml" filepath="$PROJECT_DIR$/ng-pipes/ng-pipes.iml" />
       <module fileurl="file://$PROJECT_DIR$/ng-rxjs/ng-rxjs.iml" filepath="$PROJECT_DIR$/ng-rxjs/ng-rxjs.iml" />
       <module fileurl="file://$PROJECT_DIR$/ng-services/ng-services.iml" filepath="$PROJECT_DIR$/ng-services/ng-services.iml" />
