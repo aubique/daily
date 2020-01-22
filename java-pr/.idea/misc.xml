@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="ejb" url="file://$PROJECT_DIR$/jax-conj/ejbs" />
+    <file type="javaeeApplication" url="file://$PROJECT_DIR$/jax-conj/ear" />
+    <file type="web" url="file://$PROJECT_DIR$/conj" />
+    <file type="web" url="file://$PROJECT_DIR$/jax-conj" />
+    <file type="web" url="file://$PROJECT_DIR$/jax-conj/servlets/servlet" />
+    <file type="web" url="file://$PROJECT_DIR$/jconj" />
+  </component>
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/jconj/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/jax-conj/ear/pom.xml" />
+        <option value="$PROJECT_DIR$/jax-conj/ejbs/pom.xml" />
+        <option value="$PROJECT_DIR$/jax-conj/primary-source/pom.xml" />
+        <option value="$PROJECT_DIR$/jax-conj/projects/logging/pom.xml" />
+        <option value="$PROJECT_DIR$/jax-conj/projects/pom.xml" />
+        <option value="$PROJECT_DIR$/jax-conj/servlets/pom.xml" />
+        <option value="$PROJECT_DIR$/jax-conj/servlets/servlet/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_13" default="false" project-jdk-name="13" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

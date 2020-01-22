@@ -22,6 +22,7 @@ public class jse_191209_0714 {
                 });
         return String.join(" ", initalText);
     }
+
     public static String decodeSongByStream(String text) {
         return Arrays.stream(text.split(text)).
                 filter(item -> !"".equals(item))

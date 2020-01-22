@@ -2,6 +2,11 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
+interface Command {
+
+    Integer calculate(Integer a, Integer b);
+}
+
 /**
  * Java 8 Groussard: Mise en œuvre avec Java
  * Implementing the Command Design Pattern
@@ -18,11 +23,6 @@ public class jse_191126_2031 {
         System.out.printf("Expression:%n%d %c %d = %d", a, exp, b, result);
     }
 
-}
-
-interface Command {
-
-    Integer calculate(Integer a, Integer b);
 }
 
 class CommandAction {

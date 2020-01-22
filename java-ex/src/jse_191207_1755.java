@@ -41,20 +41,6 @@ public class jse_191207_1755 {
     }
 
     /**
-     * CodeWars: Stop gninnipS My sdroW!
-     * https://www.codewars.com/kata/stop-gninnips-my-sdrow/java
-     */
-    public String spinWords(String sentence) {
-        List<String> wordList = new ArrayList<>();
-        String word = "";
-        for (String s : sentence.split(" ")) {
-            word = s.length() > 4 ? new StringBuilder(s).reverse().toString() : s;
-            wordList.add(word);
-        }
-        return String.join(" ", wordList);
-    }
-
-    /**
      * Two methods to reverse a word by StringBuilder
      */
     private static void reverseWord(String word) {
@@ -68,6 +54,20 @@ public class jse_191207_1755 {
             reversed.append(chars[chars.length - i - 1]);
         }
         System.out.println(reversed.toString());
+    }
+
+    /**
+     * CodeWars: Stop gninnipS My sdroW!
+     * https://www.codewars.com/kata/stop-gninnips-my-sdrow/java
+     */
+    public String spinWords(String sentence) {
+        List<String> wordList = new ArrayList<>();
+        String word = "";
+        for (String s : sentence.split(" ")) {
+            word = s.length() > 4 ? new StringBuilder(s).reverse().toString() : s;
+            wordList.add(word);
+        }
+        return String.join(" ", wordList);
     }
 
 }

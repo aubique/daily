@@ -23,12 +23,12 @@ abstract class Person {
         this.id = persons++;
     }
 
-    public Integer getId() {
-        return id;
-    }
-
     public static Integer getPersons() {
         return persons - 1;
+    }
+
+    public Integer getId() {
+        return id;
     }
 
     public abstract String getName();

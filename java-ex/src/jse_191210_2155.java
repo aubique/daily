@@ -6,7 +6,7 @@ public class jse_191210_2155 {
     private static final String INSERT_NEW = "INSERT INTO users (username,password,created) VALUES(?,?,?)";
     private static final String GET_ALL = "SELECT * FROM users;";
     private static final String DELETE_USER = String.format(
-            "DELETE FROM users WHERE %s=?",Options.USERNAME_FIELD);
+            "DELETE FROM users WHERE %s=?", Options.USERNAME_FIELD);
 
     public static void main(String[] args) {
         Connection conn = null;

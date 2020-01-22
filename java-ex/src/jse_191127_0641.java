@@ -4,6 +4,11 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+@FunctionalInterface
+interface Commandable {
+    Integer eval(Integer a, Integer b);
+}
+
 /**
  * Java 8 Groussard: Mise en œuvre avec Java.
  * Calculator that parses expression with Regex.
@@ -127,11 +132,6 @@ class ExpressionParser {
             System.out.println(matcherObj.group(i + 1));
         }
     }
-}
-
-@FunctionalInterface
-interface Commandable {
-    Integer eval(Integer a, Integer b);
 }
 
 /**
