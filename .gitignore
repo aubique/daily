@@ -1,4 +1,5 @@
 # IntelliJ Idea user config
+*/.idea/*
 */.idea/$CACHE_FILE$
 */.idea/workspace.xml
 */.idea/tasks.xml

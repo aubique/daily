@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core'
+import {HttpClient} from "@angular/common/http";
 
 @Component({
   selector: 'app-root',
@@ -7,8 +8,10 @@ import {Component, OnInit} from '@angular/core'
 })
 export class AppComponent implements OnInit {
 
-  ngOnInit() {
+  constructor(private http: HttpClient) {
+  }
 
+  ngOnInit() {
   }
 }
 
