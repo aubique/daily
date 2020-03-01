@@ -48,13 +48,14 @@ public class TestChrome {
 //                    "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4", // media URL
 //                    null // media content type (optional, will be discovered automatically)
 //            );
-//            cs.load("https://download-s.akamaihd.net/fle/gWNZyEqXsdtcA6wiyqtBacjcV5APWeUQbDxpDkUpcuZBGtOuIbUdfCpyEsCqA48phENuhIB6yYf8zKZzW_1_fle.mp4?__token__=exp=1582408099~hmac=7f5ba82f5816e315b7b7705ec475b7311d4b3bb406a832bb59e6ddae07213de5");
-            cs.load("https://upload.wikimedia.org/wikipedia/fr/d/d2/Sonic_Generations_Logo.jpg");
+            cs.load("https://download-s.akamaihd.net/fle/EygcBzup66GAvYymmRf6sRBqKUYsFzBmPVoPwHyHwUuhx2RBuZEQT068sWjVKiZrxwTSz70VnDnitLfwm_1_fle.mp4?__token__=exp=1583410022~hmac=1d2f4fe273dcb5cbc3f46da49b39f7ebf31f9da9ceaea1efe307285f0eccc9e3");
+//            cs.load("https://wol.jw.org/ru/wol/mp/r2/lp-u/w19/2019/915");
+//            cs.load("https://download-a.akamaihd.net/files/media_publication/ca/sjjm_U_054_r720P.mp4");
 //            cs.play();
 //            cs.seek(2237);
-            Thread.sleep(10000);
-            cs.stopApp();
-            cs.disconnect();
+//            Thread.sleep(10000);
+//            cs.stopApp();
+//            cs.disconnect();
         } catch (IOException e) {
             System.out.println("Failed to discover");
             e.printStackTrace();
@@ -62,8 +63,8 @@ public class TestChrome {
         } catch (GeneralSecurityException e) {
             System.out.println("Failed to connect");
             e.printStackTrace();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
         }
     }
 }
