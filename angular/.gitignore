@@ -1,2 +1,4 @@
-*node_modules/
-
+# Root Folder for Angular Projects
+node_modules/
+*.idea/
+*.iml

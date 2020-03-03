@@ -22,12 +22,14 @@ public class HibernateUserDAO implements UserDAO {
 
     @Override
     public List<User> getAll() {
-        return currentSession().createQuery("FROM User", User.class).list();
+        return currentSession().createQuery(
+                "FROM User", User.class).list();
     }
 
     @Override
     public User getOne(String email) {
-        Query<User> q = currentSession().createQuery("FROM User WHERE email = :email", User.class);
+        Query<User> q = currentSession().createQuery(
+                "FROM User WHERE email = :email", User.class);
         q.setParameter("email", email);
         return q.list()
                 .stream()

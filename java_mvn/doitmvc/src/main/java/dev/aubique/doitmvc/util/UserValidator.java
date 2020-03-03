@@ -1,9 +1,8 @@
 package dev.aubique.doitmvc.util;
 
-import dev.aubique.doitmvc.dao.UserDAO;
 import dev.aubique.doitmvc.model.User;
+import dev.aubique.doitmvc.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 import org.springframework.validation.Errors;
 import org.springframework.validation.Validator;
@@ -12,8 +11,7 @@ import org.springframework.validation.Validator;
 public class UserValidator implements Validator {
 
     @Autowired
-    @Qualifier("hibernateUserDAO")
-    private UserDAO userDAO;
+    private UserService userService;
 
     @Override
     public boolean supports(Class<?> clazz) {
@@ -23,7 +21,7 @@ public class UserValidator implements Validator {
     @Override
     public void validate(Object target, Errors errors) {
         User user = (User) target;
-        if (userDAO.getOne(user.getEmail()) != null) {
+        if (userService.getOne(user.getEmail()) != null) {
             errors.rejectValue("email", "", "This email isn't available");
         }
     }
