@@ -1,0 +1,26 @@
+<form [formGroup]="form" (ngSubmit)="onClose()">
+  <mat-form-field appearance="fill">
+
+    <mat-label>ID</mat-label>
+    <input matInput formControlName="id" placeholder="Type item ID">
+    <mat-icon matSuffix>perm_identity</mat-icon>
+
+    <mat-hint *ngIf="form.get('id').invalid">
+      <span *ngIf="form.get('id').errors?.pattern">Field should contain numbers</span>
+      <span *ngIf="form.get('id').errors?.required">Field should not be empty</span>
+    </mat-hint>
+
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+
+    <mat-label>Title</mat-label>
+    <input matInput formControlName="title" placeholder="Type item title">
+    <mat-icon matSuffix>title</mat-icon>
+
+    <mat-hint *ngIf="form.get('title').invalid && form.get('title').touched">
+      <span *ngIf="form.get('title').errors?.required">Field cannot be empty</span>
+    </mat-hint>
+
+  </mat-form-field>
+  <button mat-raised-button type="submit" [disabled]="form.invalid || form.pending">Close</button>
+</form>
